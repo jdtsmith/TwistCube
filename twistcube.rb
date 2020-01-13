@@ -45,10 +45,10 @@ class DCObserver < Sketchup::EntityObserver
   end
 end
 
-# This blesses a given component instance as a dynamic component,
-# gives it a and returns the new "dynamic_attributes" attribute
-# dictionary that makes a component instance dynamic, and adds a
-# "_touched" attribute to track interactions.
+# This blesses a given component instance as a dynamic component, and
+# returns the new "dynamic_attributes" attribute dictionary that makes
+# a component instance dynamic, adding a "_touched" attribute to
+# track interactions.
 def initDynamicComponent(entity)
   entity.set_attribute "dynamic_attributes","_formatversion",1.0
   da=entity.attribute_dictionary("dynamic_attributes")
